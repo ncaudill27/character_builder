@@ -36,4 +36,12 @@ class UsersController < ApplicationController
 
         redirect "/#{user.username}"
     end
+
+    delete "/:username" do
+        user = User.find_by(username: params[:username])
+        #TODO Add security check
+        user.destroy
+
+        redirect "/users"
+    end
 end

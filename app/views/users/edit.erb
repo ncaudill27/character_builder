@@ -11,3 +11,8 @@
     
     <input type="submit" value="Edit Profile">
 </form>
+
+<form action="/<%=@user.username%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete <%=@user.username%>">
+</form>
