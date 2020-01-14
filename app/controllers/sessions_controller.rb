@@ -10,4 +10,8 @@ class SessionsController < ApplicationController
 
         redirect "/#{current_user.username}"
     end
+
+    get "/logout" do
+        session.clear
+    end
 end

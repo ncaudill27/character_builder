@@ -19,6 +19,10 @@
         <%= yield %>
 
       <footer class="branding">
+        <% if logged_in? %>
+        <small><a href="/logout">Log Out</a></small>
+        <% end %>
+        <br>
         <small>&copy; 2020 <strong>CharacterBuilder</strong></small>
       </footer>
     </div>
