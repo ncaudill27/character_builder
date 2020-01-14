@@ -15,4 +15,10 @@ class UsersController < ApplicationController
 
         erb :"users/show"
     end
+
+    get "/:username/edit" do
+        @user = User.find_by(username: params[:username])
+        
+        erb :"users/edit"
+    end
 end

@@ -1,0 +1,14 @@
+<h1>Edit <%= @user.username %></h1><br>
+
+<form action="/signup" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label>Username:</label><br>
+    <input type="text" name="user[username]" value="<%=@user.username%>"><br>
+    <label>Email:</label><br>
+    <input type="text" name="user[email]" value="<%=@user.email%>"><br>
+    <label><a href="<%=@user.username%>/edit/password">Change Password</a></label><br>
+    <br>
+    
+    <input type="submit" value="Edit Profile">
+</form>
+
