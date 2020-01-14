@@ -18,16 +18,18 @@ class UsersController < ApplicationController
 
     get "/:username" do
         @user = User.find_by(username: params[:username])
-        #TODO Add security check
 
         erb :"users/show"
     end
 
     get "/:username/edit" do
         @user = User.find_by(username: params[:username])
-        #TODO Add security check
-        
-        erb :"users/edit"
+
+        if @user && current_user.username == @user.username
+            erb :"users/edit"
+        else
+            redirect "/login"
+        end
     end
 
     patch "/:username" do
@@ -35,7 +37,7 @@ class UsersController < ApplicationController
         user.username = params[:user][:username]
         user.email = params[:user][:email]
         user.save
-
+        
         redirect "/#{user.username}"
     end
 
