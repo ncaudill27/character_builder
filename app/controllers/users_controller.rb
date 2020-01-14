@@ -5,6 +5,14 @@ class UsersController < ApplicationController
     end
 
     post "/signup" do
-        @us
+        user = User.create(params[:user])
+
+        redirect "/login"
+    end
+
+    get "/:username" do
+        @user = User.find_by(username: params[:username])
+
+        erb :"users/show"
     end
 end
