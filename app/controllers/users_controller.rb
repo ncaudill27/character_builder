@@ -21,4 +21,13 @@ class UsersController < ApplicationController
         
         erb :"users/edit"
     end
+
+    patch "/:username" do
+        user = User.find_by(username: params[:username])
+        user.username = params[:user][:username]
+        user.email = params[:user][:email]
+        user.save
+
+        redirect "/#{user.username}"
+    end
 end
