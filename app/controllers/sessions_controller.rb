@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
 
     post "/login" do
         user = User.find_by(email: params[:user][:email])
-        #TODO Add security
-        redirect "/#{user.username}"
+        session[:email] = user.email
+
+        redirect "/#{current_user.username}"
     end
 end
