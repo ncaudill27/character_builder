@@ -18,12 +18,14 @@ class UsersController < ApplicationController
 
     get "/:username" do
         @user = User.find_by(username: params[:username])
+        #TODO Add security check
 
         erb :"users/show"
     end
 
     get "/:username/edit" do
         @user = User.find_by(username: params[:username])
+        #TODO Add security check
         
         erb :"users/edit"
     end
