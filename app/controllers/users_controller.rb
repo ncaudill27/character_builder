@@ -5,9 +5,12 @@ class UsersController < ApplicationController
     end
 
     post "/signup" do
-        user = User.create(params[:user])
-
-        redirect "/login"
+        unless params[:user].values.any?("")
+            user = User.create(params[:user])
+            redirect "/login"
+        else
+            redirect "/signup"
+        end
     end
 
     get "/users" do
@@ -25,7 +28,7 @@ class UsersController < ApplicationController
     get "/:username/edit" do
         @user = User.find_by(username: params[:username])
 
-        if @user && current_user.username == @user.username
+        if logged_in? && current_user.username == @user.username
             erb :"users/edit"
         else
             redirect "/login"
