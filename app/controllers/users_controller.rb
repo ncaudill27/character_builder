@@ -5,9 +5,16 @@ class UsersController < ApplicationController
     end
 
     post "/signup" do
-        unless params[:user].values.any?("")
-            user = User.create(params[:user])
-            redirect "/login"
+        user = User.new
+        user.username = params[:user][:username]
+        user.email = params[:user][:email]
+        user.password = params[:user][:password]
+        user.save
+
+        if user.id
+            session[:email] = user.email
+
+            redirect "/#{current_user.username}"
         else
             redirect "/signup"
         end

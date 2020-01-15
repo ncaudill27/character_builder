@@ -1,19 +1,21 @@
 class Character < ActiveRecord::Base
+    validates :name, :klass, :race, :user_id, presence: true
+    
     belongs_to :user
 
     def owner
-        User.find(self.user_id).username
+        self.user.username
     end
 
     def stats
         {
-            "Health Points" => self.hp,
-            "Strength" => self.str,
-            "Dexterity" => self.dex,
-            "Constitution" => self.con,
-            "Intelligence" => self.int,
-            "Wisdom" => self.wis,
-            "Charisma" => self.cha
+            "Health Points" => "hp",
+            "Strength" => "str",
+            "Dexterity" => "dex",
+            "Constitution" => "con",
+            "Intelligence" => "int",
+            "Wisdom" => "wis",
+            "Charisma" => "cha"
         }
     end
 end

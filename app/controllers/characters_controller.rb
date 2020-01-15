@@ -6,7 +6,8 @@ class CharactersController < ApplicationController
     end
 
     get "/characters/new" do
-        session[:character] = Character.new
+        @character = Character.new
+
         erb :"/characters/new"
     end
 
@@ -17,24 +18,16 @@ class CharactersController < ApplicationController
     end
 
     post "/characters" do
-        case params[:answer]
-        when "yes"
-            redirect "/characters/new/info"
-        when "no"
-            redirect "/#{current_user.username}"
-        end
+       @character = Character.new(params[:character])
+       @character.user = current_user
+       @character.save
+
+       redirect "/characters/#{@character.id}"
     end
 
-    get "/characters/new/info" do
-        erb :"/characters/info"
-    end
-
-    post "/characters/info" do
-        name, race, klass = params[character][name], params[character][race], params[character][klass]
-        session[:character].name = name
-        session[:character].race = race
-        session[:character].klass = klass
-
-        redirect "/characters/new/stats"
+    get "/characters/:id/edit" do
+        @character = Character.find_by(id: params[:id])
+        
+        erb :"/characters/edit"
     end
 end
