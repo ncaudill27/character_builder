@@ -1,0 +1,14 @@
+<h1><%= @character.name %>
+
+<h3>Race</h3>
+<h5><%= @character.race %></h5>
+
+<h3>Class</h3>
+<h5><%= @character.klass %></h5>
+
+<h3>Stats</h3>
+<ul>
+<% @character.stats.each do |key, value| %>
+    <li><%=key%>: <%=value%></li>
+<% end %>
+</ul>

@@ -2,9 +2,9 @@
 
 <h2>Created Character's</h2>
 <ul>
-    <li>Example</li>
-    <li>Example</li>
-    <li>Example</li>
+<% @user.characters.each do |character| %>
+    <li><a href="/characters/<%=character.id%>"><%=character.name%></a></li>
+<% end %>
 </ul>
 
 <br><br>
