@@ -1,0 +1,9 @@
+<h1>Characters</h1><br>
+
+<ul>
+<% @characters.each do |character| %>
+    <li><a href="/<%=character.id%>"><%=character.name%></a>,
+    Made By:<a href="/<%=character.owner%>"> <%=character.owner%></a>
+    </li>
+<% end %>
+</ul>
