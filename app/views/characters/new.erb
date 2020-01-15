@@ -1,6 +1,6 @@
 <h1>Create New Character</h1><br>
 
-<h1>Character's Details</h1>
+<h2>Character's Details</h2>
 
 <form action="/characters" method="post">
     <label>Name:</label>
@@ -10,10 +10,11 @@
     <label>Class:</label>
     <input type="text" name="character[klass]"><br>
     
+<h2>Character's Stats</h2>
     
     <% @character.stats.each do |key, val| %>
         <label><%= key %></label>
-        <input type="text" name="character[<%= val %>]">
+        <input type="text" name="character[<%= val %>]"><br>
     <% end %>
 
     <input type="submit" value="Continue">

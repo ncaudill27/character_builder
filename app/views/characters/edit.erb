@@ -2,18 +2,19 @@
 
 <h1>Character's Details</h1>
 
-<form action="/characters" method="post">
+<form action="/characters/<%=@character.id%>" method="post">
+<input type="hidden" name="_method" value="patch">
     <label>Name:</label>
-    <input type="text" name="character[name]"><br>
+    <input type="text" name="character[name]" value="<%= @character.name%>"><br>
     <label>Race:</label>
-    <input type="text" name="character[race]"><br>
+    <input type="text" name="character[race]" value="<%= @character.race%>"><br>
     <label>Class:</label>
-    <input type="text" name="character[klass]"><br>
+    <input type="text" name="character[klass]" value="<%= @character.klass%>"><br>
     
     
     <% @character.stats.each do |key, val| %>
         <label><%= key %></label>
-        <input type="text" name="character[<%= val %>]">
+        <input type="text" name="character[<%=val%>]" value="<%=@character.send(val)%>"><br>
     <% end %>
 
     <input type="submit" value="Continue">
