@@ -1,10 +1,19 @@
 <h1><%= @user.username %>'s Profile</h1>
-
+<br><br>
 <h2>Created Character's</h2>
+
 <ul>
-<% @user.characters.each do |character| %>
-    <li><a href="/characters/<%=character.id%>"><%=character.name%></a></li>
-<% end %>
+    <% @user.characters.each do |character| %>
+    <div class="profile-row">
+        <h3>
+            <div class="column"><a href="/characters/<%=character.id%>"><%=character.name%></a></div>
+            <div class="column"><%=character.race%></div>
+            <div class="column"><%=character.klass%></div>
+            <div class="column"><button><a id="edit" href="/characters/<%=character.id%>/edit">Edit</a></button></div>
+            <div class="column">Incomplete</div><br>
+        </h3>
+    </div>
+    <% end %>
 </ul>
 
 <br><br>
