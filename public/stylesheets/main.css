@@ -62,8 +62,12 @@
     padding: 1px;
     margin-top: 11px;
     font-size: 17px;
-    border: none;
-    width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+    border: 2px thin black;
+    width: 150px;
+  }
+
+  .navbar input:focus {
+    border: 2px solid #800000;
   }
 
   /* Style the button inside the input container */
@@ -89,7 +93,7 @@
   }
 
   .navbar .login-container button:hover {
-    background: #ccc;
+    background: #800000;
   }
 
   .wrapper {
