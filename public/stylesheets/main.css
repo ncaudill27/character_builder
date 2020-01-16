@@ -229,6 +229,23 @@
     clear: both;
   }
 
+  .add-button button {
+    float: left;
+    margin-left: 22.5%;
+    display: inline-block;
+    width: 87px;
+    background: #400000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add-button a {
+    text-decoration: none;
+    color: white;
+  }
+
 
   .main {
     overflow: hidden;
