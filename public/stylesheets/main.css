@@ -158,14 +158,33 @@
     margin-bottom: 18px;
   }
 
+  .profile-headers {
+    margin: 0% 8% 5% 8%;
+
+  }
+
+  .header-title {
+    float: left;
+    width: 10%;
+    margin-right: 7%;
+    text-decoration: underline;
+  }
+
+  .header-title:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .profile-row {
-    margin: 0% 8% 3% 8%;
+    margin: 0% 8% 1% 8%;
   }
 
   .column {
     float: left;
-    width; 20%;
+    width: 10%;
     margin-right: 7%;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .column a {
@@ -192,7 +211,7 @@
     background: black;
   }
 
-  .row:after {
+  .profile-row:after {
     content: "";
     display: table;
     clear: both;
