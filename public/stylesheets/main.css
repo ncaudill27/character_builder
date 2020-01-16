@@ -24,6 +24,7 @@
     height: 100%;
     overflow: hidden;
     background-color: #CBCBCB;
+    font-family: 'Montserrat', sans-serif;
   }
   
   /* Navbar links */
@@ -73,6 +74,7 @@
     margin-right: 4px;
     background: #282828;
     color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     border: none;
     cursor: pointer;
@@ -100,6 +102,7 @@
     padding-bottom: 1.25%; /* 18px / 800px */
     width: 85%;
     text-align: center;
+    font-family: 'Abril Fatface', cursive;
   }
 
   h1 {
