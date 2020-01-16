@@ -15,7 +15,18 @@
   </head>
   <body>
     <div class="wrapper">
-
+      <div class="navbar">
+        <a href="/characters">Creations</a>
+        <a href="/users">Creators</a>
+        <div class="login-container">
+          <form action="/login" method="post">
+            <input type="text" placeholder="Email" name="user[email]">
+            <input type="password" placeholder="Password" name="user[password]">
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+      
         <%= yield %>
 
       <footer class="branding">
