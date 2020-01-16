@@ -18,5 +18,9 @@ class Character < ActiveRecord::Base
             "Charisma" => "cha"
         }
     end
+
+    def incomplete?
+        self.stats.values.collect{|stat| self.send(stat)}.any?("")
+    end
 end
 #? Character.new.errors[:name].any? # => false (MAY NEED)

@@ -19,7 +19,9 @@
             <div class="column"><%=character.race%></div>
             <div class="column"><%=character.klass%></div>
             <div class="column"><button><a id="edit" href="/characters/<%=character.id%>/edit">Edit</a></button></div>
-            <div class="column">Incomplete</div><br>
+        <% if character.incomplete? %>
+            <div id="stat-check" class="column">Incomplete!</div><br>
+        <% end %>
         </h3>
     </div>
     <% end %>
