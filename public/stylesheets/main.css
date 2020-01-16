@@ -229,9 +229,10 @@
     clear: both;
   }
 
-  .add-button button {
+  .add-character button {
     float: left;
     margin-left: 22.5%;
+    margin-bottom: 3%;
     display: inline-block;
     width: 87px;
     background: #400000;
@@ -241,7 +242,25 @@
     cursor: pointer;
   }
 
-  .add-button a {
+  .add-character a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .edit-user button {
+    float: right;
+    margin-right: 8px;
+    margin-top: 1%;
+    display: inline-block;
+    width: 77px;
+    background: #400000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .edit-user a {
     text-decoration: none;
     color: white;
   }
