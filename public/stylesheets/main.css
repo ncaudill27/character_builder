@@ -59,10 +59,9 @@
 
   /* Style the input field inside the navbar */
   .navbar input {
-    padding: 1px;
-    margin-top: 11px;
+    margin-top: 11.35px;
     font-size: 17px;
-    border: 2px thin black;
+    border: 3px thin black;
     width: 150px;
   }
 
@@ -73,9 +72,8 @@
   /* Style the button inside the input container */
   .navbar .login-container button {
     display: inline-block;
-    padding: 1px;
     margin-top: 11px;
-    margin-right: 4px;
+    margin-right: 2px;
     background: #282828;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
@@ -89,6 +87,7 @@
   }
 
   .navbar form#out-button {
+    padding: 1px;
     float: right;
   }
 
