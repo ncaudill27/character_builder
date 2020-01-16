@@ -70,7 +70,11 @@
   }
 
   /* Style the button inside the input container */
-  .navbar .login-container button {
+  .login-container {
+    margin-right: 6px;
+  }
+  
+  .login-container button {
     display: inline-block;
     margin-top: 11px;
     margin-right: 2px;
@@ -233,7 +237,6 @@
     float: left;
     margin-left: 22.5%;
     margin-bottom: 3%;
-    display: inline-block;
     width: 87px;
     background: #400000;
     font-family: 'Montserrat', sans-serif;
@@ -247,17 +250,27 @@
     color: white;
   }
 
-  .edit-user button {
+  .edit-user {
     float: right;
     margin-right: 8px;
-    margin-top: 1%;
-    display: inline-block;
+    margin-top: 3px;
+  }
+
+  .edit-user button {
     width: 77px;
     background: #400000;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     border: none;
     cursor: pointer;
+  }
+
+  .edit-user button:hover {
+    background: black;
+  }
+
+  .add-character button:hover {
+    background: black;
   }
 
   .edit-user a {
