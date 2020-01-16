@@ -37,9 +37,19 @@
     font-size: 17px;
   }
 
+  .navbar a#first {
+    background-color: #800000;
+    color: #FFFFFF;
+  }
+
   .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+
+  .navbar a#first:hover {
+    background-color: #000000;
+    color: #FFFFFF;
   }
   /* Style the input container */
   .navbar .login-container {
@@ -57,15 +67,23 @@
 
   /* Style the button inside the input container */
   .navbar .login-container button {
-    float: right;
+    display: inline-block;
     padding: 1px;
     margin-top: 11px;
-    margin-right: 16px;
+    margin-right: 4px;
     background: #282828;
     color: #FFFFFF;
     font-size: 17px;
     border: none;
     cursor: pointer;
+  }
+
+  .navbar form#in-button {
+    float: left;
+  }
+
+  .navbar form#out-button {
+    float: right;
   }
 
   .navbar .login-container button:hover {
@@ -81,6 +99,7 @@
     max-width: 960px;
     padding-bottom: 1.25%; /* 18px / 800px */
     width: 85%;
+    text-align: center;
   }
 
   h1 {
@@ -133,6 +152,8 @@
     border-top: 2px solid #ccc;
     margin-top: 20px;
     padding-top: 20px;
+    padding-right: 8px;
+    text-align: right;
   }
 }
 

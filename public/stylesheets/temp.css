@@ -46,6 +46,7 @@
 /* Style the button inside the input container */
 .navbar .login-container button {
   float: right;
+  display: inline;
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
