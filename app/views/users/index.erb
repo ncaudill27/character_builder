@@ -1,7 +1,10 @@
-<h1>Users</h1>
+<br><br><br>
+<h1>Creators</h1>
 
-<ul>
-<% @users.each do |user| %>
-    <li><a href="<%=user.username%>"><%=user.username%></a></li>
-<% end %>
-</ul>
+<div class="users-container">
+    <ul>
+    <% @users.each do |user| %>
+        <h3><a href="<%=user.username%>"><%=user.username%></a>, Creations: <%=user.characters.count%></h3>
+    <% end %>
+    </ul>
+</div>
