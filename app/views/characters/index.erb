@@ -1,9 +1,12 @@
-<h1>Characters</h1><br>
+<br><br><br>
+<h1>Characters</h1>
 
+<div class="index-container">
 <ul>
 <% @characters.each do |character| %>
-    <li><a href="/characters/<%=character.id%>"><%=character.name%></a>,
+    <h3><a href="/characters/<%=character.id%>"><%=character.name%></a>,
     Made By:<a href="/<%=character.owner%>"> <%=character.owner%></a>
-    </li>
+    </h3>
 <% end %>
 </ul>
+</div>
