@@ -29,6 +29,23 @@ class Klass
   
 end
 
+class Race
+  @@all = []
+
+  attr_accessor :url, :name
+  
+  def initialize
+    @@all << self
+    @skills = []
+    @proficiencies = []
+  end
+  
+  def self.all
+    @@all
+  end
+  
+end
+
 class Scraper
   
   def scrape_classes(url)
@@ -38,6 +55,18 @@ class Scraper
     
     names.each.with_index do |name, index|
       c = Klass.new
+      c.name = name
+      c.url = urls[index]
+    end
+  end
+
+  def scrape_races(url)
+    doc = Nokogiri::HTML(open(url))
+    names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
+    urls = doc.text.scan(/\/api\/races\/[a-z]+/i)
+    
+    names.each.with_index do |name, index|
+      c = Race.new
       c.name = name
       c.url = urls[index]
     end
@@ -62,6 +91,7 @@ end
 
 s = Scraper.new
 s.scrape_classes("http://dnd5eapi.co/api/classes/")
+s.scrape_races("http://dnd5eapi.co/api/races/")
 
 c = Klass.all.first
 
