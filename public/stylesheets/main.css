@@ -38,6 +38,15 @@
     top: 40%;
     border-bottom: none;
   }
+
+  a#bar-logo {
+    height: 45px;
+    padding: 0px;
+  }
+
+  img#bar-logo {
+    height: 47px;
+  }
   
   img#welcome {
     float: top;
