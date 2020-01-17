@@ -309,6 +309,22 @@
     margin-bottom: 3%;
     font-family: 'Montserrat', sans-serif;
   }
+
+  .index-row {
+    margin-left: 137px;
+    text-align: left;
+  }
+
+  .index-column {
+    float: left;
+    width: 45%;
+  }
+
+  .index-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 /* End Users Index Styling */
 
   .main {

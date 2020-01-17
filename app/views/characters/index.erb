@@ -1,12 +1,22 @@
 <br><br><br>
-<h1>Characters</h1>
+<h1>Creations</h1>
 
 <div class="index-container">
-<ul>
-<% @characters.each do |character| %>
-    <h3><a href="/characters/<%=character.id%>"><%=character.name%></a>,
-    Made By:<a href="/<%=character.owner%>"> <%=character.owner%></a>
-    </h3>
-<% end %>
-</ul>
+    <ul>
+    <%# a.each_slice(2){|row| puts row[0], row[1]; sleep 1} %>
+    <% @characters.each_slice(2) do |pair| %>
+        <div class="index-row">
+            <h3>
+                <div class="index-column">
+                    <a href="/characters/<%=pair[0].id%>"><%=pair[0].name%></a>,
+                    Made By:<a href="/<%=pair[0].owner%>"> <%=pair[0].owner%></a>
+                </div>
+                <div class="index-column">
+                    <a href="/characters/<%=pair[1].id%>"><%=pair[1].name%></a>,
+                    Made By:<a href="/<%=pair[1].owner%>"> <%=pair[1].owner%></a>
+                </div>
+            </h3>
+        </div>
+    <% end %>
+    </ul>
 </div>
