@@ -325,6 +325,30 @@
     display: table;
     clear: both;
   }
+
+  .user-container {
+    margin-left: 160px;
+    margin-top: 40px;
+    margin-bottom: 3%;
+    padding-left: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .user-row {
+    margin-left: 0px;
+    text-align: left;
+  }
+
+  .user-column {
+    float: left;
+    width: 40%;
+  }
+
+  .user-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 /* End Users Index Styling */
 
   .main {

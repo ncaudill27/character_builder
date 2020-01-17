@@ -1,10 +1,19 @@
 <br><br><br>
 <h1>Creators</h1>
 
-<div class="index-container">
+<div class="user-container">
     <ul>
-    <% @users.each do |user| %>
-        <h3><a href="<%=user.username%>"><%=user.username%></a>, Creations: <%=user.characters.count%></h3>
+    <% @users.each_slice(2) do |pair| %>
+    <div class="user-row">
+        <h3>
+        <div class="user-column">
+            <a href="<%=pair[0].username%>"><%=pair[0].username%></a>, Creations: <%=pair[0].characters.count%>
+        </div>
+        <div class="user-column">
+            <a href="<%=pair[1].username%>"><%=pair[1].username%></a>, Creations: <%=pair[1].characters.count%>
+        </div>
+        </h3>
+    <div>
     <% end %>
     </ul>
-</div>b
+</div>
