@@ -273,9 +273,9 @@
     color: white;
   }
   
-    .add-character button:hover {
-      background: black;
-    }
+  .add-character button:hover {
+    background: black;
+  }
 
 /* Style "Edit Profile" Button */
   .edit-user {
@@ -349,7 +349,32 @@
     display: table;
     clear: both;
   }
-/* End Users Index Styling */
+/* End Index Styling */
+
+/* Login Styling */
+
+  .login-page {
+    margin: 20px 0px 40px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .login-page button {
+    margin-top: 5px;
+    width: 60px;
+    background: #400000;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+  }
+
+  .login-page button:hover {
+    background: black;
+  }
+
 
   .main {
     overflow: hidden;
