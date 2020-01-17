@@ -19,6 +19,8 @@ class Klass
   
   def initialize
     @@all << self
+    @skills = []
+    @proficiencies = []
   end
   
   def self.all
@@ -40,10 +42,31 @@ class Scraper
       c.url = urls[index]
     end
   end
+
+  def scrape_details(url)
+    doc = Nokogiri::HTML(open("http://dnd5eapi.co" + url))
+    export = []
+    
+    hit_die = doc.text.match(/hit_die..\d+/).to_s.match(/\d+/).to_s.to_i
+    export << hit_die
+
+    all = doc.text.scan(/\/api\/proficiencies\/[a-z]*-?[a-z]*-?[a-z]*/i).collect{|i| i.split("proficiencies/")[1]}
+    skills = all.select{|i| i.match(/skill/)}
+    proficiencies = all.select{|i| !i.match(/skill/)}
+    export << skills
+    export << proficiencies
+    
+    export
+  end
 end
 
+s = Scraper.new
+s.scrape_classes("http://dnd5eapi.co/api/classes/")
+
+c = Klass.all.first
 
 binding.pry
+s.scrape_details(c.url)
 
 # Source Klass.url slugs:
 
