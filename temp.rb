@@ -40,5 +40,11 @@ binding.pry
 
 # doc.text.scan(/\/api\/proficiencies\/[a-z]*-?[a-z]*/i)
 
+# Skills and Proficienies
+# all = doc.text.scan(/\/api\/proficiencies\/[a-z]*-?[a-z]*-?[a-z]*/i).collect{|i| i.split("proficiencies/")[1]}
+
 # Skills
-# doc.text.scan(/\/api\/proficiencies\/[a-z]*-?[a-z]*/i).collect{|i| i.split("proficiencies/")[1]}
+# all.select{|i| i.match(/skill/)}
+
+# Proficiencies
+# all.select{|i| !i.match(/skill/)}
