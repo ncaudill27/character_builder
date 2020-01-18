@@ -23,8 +23,8 @@
     <div class="profile-row">
         <h3>
             <div class="column"><a href="/characters/<%=character.id%>"><%=character.name%></a></div>
-            <div class="column"><%=character.race%></div>
-            <div class="column"><%=character.klass%></div>
+            <div class="column"><%=character.race.name%></div>
+            <div class="column"><%=character.klass.name%></div>
             <div class="column"><button><a id="edit" href="/characters/<%=character.id%>/edit">Edit</a></button></div>
         <% if character.incomplete? %>
             <div id="stat-check" class="column">Incomplete!</div><br>
