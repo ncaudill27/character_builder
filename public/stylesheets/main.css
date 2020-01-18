@@ -379,17 +379,42 @@
 /* End Login Styling */
 
 /* Begin Characters Edit Styling */
+
+  .name-edit {
+    margin-bottom: 40px;
+  }
+
+  .name-edit input {
+    padding: 1px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    box-shadow: 1px 1px 1px black;
+    border-color: #400000;
+    background: #400000;
+    color: #FFFFFF
+  }
+
   .edit-container {
     margin: 40px 100px 20px 100px;
   }
 
-  .edit-container h3 {
+  .edit-container h2 {
     text-decoration: underline;
+    margin-bottom: 4px;
   }
 
   .attribute-container {
-    margin: 10px 200px 5px 200px;
-    padding: 0px 100px 10px 100px;
+    margin: 10px 200px 75px 200px;
+    padding: 0px 50px 10px 50px;
+  }
+
+  .attribute-container select {
+    padding: 2px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 1px 1px 1px black;
+    border-color: #400000;
+    background: #400000;
+    color: #FFFFFF
   }
 
   .race-container {
@@ -410,6 +435,21 @@
 
   .stats-container label {
     font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
+
+  .stats-container input[type=text] {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: #400000;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    box-shadow: 1px 1px 2px black;
+    border-color: #400000;
   }
 
   .stats-row {

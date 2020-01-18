@@ -5,11 +5,12 @@
 <div class="edit-container">
     <form action="/characters/<%=@character.id%>" method="post">
     <input type="hidden" name="_method" value="patch">
-        <h3>Name</h3>
+    <div class ="name-edit"><h2>Name</h2>
         <input type="text" name="character[name]" value="<%= @character.name%>"><br>
+    </div>
     <div class="attribute-container">
         <div class="race-container">
-            <h3>Race</h3><br>
+            <h2>Race</h2>
             <select name="race[name]">
                 <% @races.each do |race| %>
                 <option value="<%=race.name%>"><%=race.name%></option>
@@ -17,7 +18,7 @@
                 </select>
         </div>
         <div class="klass-container">
-            <h3>Class</h3><br>
+            <h2>Class</h2>
                 <select name="klass[name]">
                 <% @klasses.each do |klass| %>
                 <option value="<%=klass.name%>"><%=klass.name%></option>
@@ -28,7 +29,7 @@
 
     <div class="stats-container">
         <div class="health-container">
-        <h3>Stats</h3>
+        <h2>Stats</h2>
         <label>Health Points</label><br>
         <input type="text" name="character[hp]" value="<%=@character.hp%>"><br>
         </div>
@@ -45,7 +46,7 @@
         </div>
         <% end %>
     </div>
-    <br><br><br><br><br><br>
-        <input type="submit" value="Continue">
+    <br><br><br><br><br><br><br><br>
+        <input type="submit" value="Save Changes">
     </form>
 </div>
