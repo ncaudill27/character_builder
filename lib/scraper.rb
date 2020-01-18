@@ -1,26 +1,10 @@
 require 'nokogiri'
 require 'open-uri'
+require 'pry'
 
 class Scraper
 
   def klasses
-    get_classes
-    Klass.all.each do |klass|
-      add_details(klass)
-    end
-  end
-
-  def races
-    doc = Nokogiri::HTML(open("http://dnd5eapi.co/api/races/"))
-    names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
-    urls = doc.text.scan(/\/api\/races\/[a-z]+/i)
-    
-    names.each do |name|
-      Race.create(name: name)
-    end
-  end
-
-  def get_classes
     doc = Nokogiri::HTML(open("http://dnd5eapi.co/api/classes/"))
 
     names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
@@ -30,10 +14,17 @@ class Scraper
     #=> Array of class urls for scraping details
     
     names.each.with_index do |name, index|
-      c = Klass.new
-      c.name = name
-      c.url = urls[index]
-      c.save
+      Klass.create(name: name, url: urls[index])
+    end
+  end
+
+  def races
+    doc = Nokogiri::HTML(open("http://dnd5eapi.co/api/races/"))
+    names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
+    # urls = doc.text.scan(/\/api\/races\/[a-z]+/i)
+    
+    names.each do |name|
+      Race.create(name: name)
     end
   end
 
