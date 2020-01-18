@@ -8,7 +8,13 @@ class Scrape
   end
 
   def races
+    doc = Nokogiri::HTML(open("http://dnd5eapi.co/api/races/"))
+    names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
+    urls = doc.text.scan(/\/api\/races\/[a-z]+/i)
     
+    names.each do |name|
+      Race.create(name: name)
+    end
   end
 
   def get_classes
@@ -25,17 +31,6 @@ class Scrape
       c.name = name
       c.url = urls[index]
       c.save
-    end
-  end
-
-  def get_races
-    doc = Nokogiri::HTML(open("http://dnd5eapi.co/api/races/"))
-    names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
-    urls = doc.text.scan(/\/api\/races\/[a-z]+/i)
-    
-    names.each do |name|
-      c = Race.new
-      c.name = name
     end
   end
 
