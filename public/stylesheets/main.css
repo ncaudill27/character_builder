@@ -500,6 +500,10 @@
     padding-bottom: 0px;
   }
   
+  .race-klass h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: xx-large;
+  }
   .race-box {
     box-sizing: border-box;
     width: 35%;
@@ -555,8 +559,14 @@
 
   .skill-column {
     float: left;
-    width: 26%;
+    width: 23%;
     margin-bottom: 10px;
+  }
+
+  .skills-row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 /* End Character Show Styling */
 
