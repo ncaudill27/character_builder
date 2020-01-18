@@ -11,7 +11,6 @@ class Character < ActiveRecord::Base
 
     def stats
         {
-            "Health Points" => "hp",
             "Strength" => "str",
             "Dexterity" => "dex",
             "Constitution" => "con",

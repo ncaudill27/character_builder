@@ -28,10 +28,19 @@
 
     <div class="stats-container">
         <h3>Stats</h3>
-
-        <% @character.stats.each do |key, val| %>
-        <label><%= key %></label>
-        <input type="text" name="character[<%=val%>]" value="<%=@character.send(val)%>"><br>
+        <%= @character.stats.keys[0]%>
+        <input type="text" name="character[@character.stats.values[0]]" value="<%=@character.send(@character.stats.values[0])%>"><br>
+        <% @character.stats.each_slice(2) do |key, val| %>
+        <div class="stats-row">
+            
+            <label><%= key[0] %></label>
+            <input type="text" name="character[<%=key[1]%>]" value="<%=@character.send(key[1])%>"><br>
+                <% if val %>
+            <label><%= val[0] %></label>
+            <input type="text" name="character[<%=val[1]%>]" value="<%=@character.send(val[1])%>"><br>
+                <% end %>
+            
+        </div>
         <% end %>
     </div>
 
