@@ -499,10 +499,6 @@
     border-bottom: none;
     padding-bottom: 0px;
   }
-
-  .race-klass {
-    
-  }
   
   .race-box {
     box-sizing: border-box;
@@ -528,25 +524,22 @@
     margin-bottom: 10px;
   }
 
-  .show-stats {
+  
+
+  .stats-show {
     padding: 0px;
-    margin-top: 5px;
-    background-color: #400000;
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
     text-align: center;
-    box-shadow: 1px 1px 2px lightslategray;
-    border-color: palegoldenrod;
   }
 
-  .edit-container input[type=submit]:hover {
-    cursor: pointer;
-    border-color: darkgray;
-    background: black;
+  .stats-show label {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
   }
-  
 
-  
+  .stats-show h3 {
+    font-family: 'Montserrat', sans-serif;
+  }
 /* End Character Show Styling */
 
   .main {

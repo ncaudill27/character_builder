@@ -33,6 +33,11 @@
     </div>
     <% end %>
 </div>
+<div class="skills-show">
+    <% @character.skills.each do |skill| %>
+        <h3><%=skill.name%></h3>
+    <% end %>
+</div>
     <br>
     <h5><a href="/characters/<%=@character.id%>/edit">Edit Character</a></h5>
     <br>
