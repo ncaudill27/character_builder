@@ -8,19 +8,22 @@
         <h3>Name</h3>
         <input type="text" name="character[name]" value="<%= @character.name%>"><br>
     <div class="attribute-container">
-        <h3 id="race">Race</h3><br>
-        <select name="race[name]">
-            <% @races.each do |race| %>
-            <option value="<%=race.name%>"><%=race.name%></option>
-            <% end %>
-            </select>
-        
-        <h3 id="klass">Class</h3><br>
-            <select name="klass[name]">
-            <% @klasses.each do |klass| %>
-            <option value="<%=klass.name%>"><%=klass.name%></option>
-            <% end %>
-            </select>
+        <div class="race-container">
+            <h3>Race</h3><br>
+            <select name="race[name]">
+                <% @races.each do |race| %>
+                <option value="<%=race.name%>"><%=race.name%></option>
+                <% end %>
+                </select>
+        </div>
+        <div class="klass-container">
+            <h3>Class</h3><br>
+                <select name="klass[name]">
+                <% @klasses.each do |klass| %>
+                <option value="<%=klass.name%>"><%=klass.name%></option>
+                <% end %>
+                </select>
+        </div>
     </div>
 
     <div class="stats-container">

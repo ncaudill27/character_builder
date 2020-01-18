@@ -380,12 +380,27 @@
 
 /* Begin Characters Edit Styling */
   .edit-container {
-    margin: 40px 0px 10px 0px;
+    margin: 40px 100px 20px 100px;
+    
   }
 
   .edit-container h3 {
     text-decoration: underline;
   }
+
+  .attribute-container {
+    margin: 10px 200px 5px 200px;
+  }
+
+  .race-container {
+    float: left;
+  }
+
+  .klass-container {
+    float: right;
+  }
+
+  
 /* End Characters Edit Styling */
 
   .main {
