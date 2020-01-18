@@ -14,19 +14,19 @@
         <h3><%= @character.klass.name %></h3>
     </div>
 </div>
-<div class="stats-container">
+<div class="stats-show">
     <div class="health-container">
     <h2>Stats</h2>
     <label>Health Points</label>
     <h3><%=@character.hp%></h3><br>
     </div>
     <% @character.stats.each_slice(2) do |key, val| %>
-    <div class="stats-row">
-        <div class="stats-column">
+    <div class="show-row">
+        <div class="show-column">
             <label><%= key[0] %></label><br>
             <h3><%=@character.send(key[1])%></h3><br>
         </div>
-        <div class="stats-column">
+        <div class="show-column">
             <label><%= val[0] %></label><br>
             <h3><%=@character.send(val[1])%></h3><br>
         </div>
