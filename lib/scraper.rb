@@ -1,4 +1,7 @@
-class Scrape
+require 'nokogiri'
+require 'open-uri'
+
+class Scraper
 
   def klasses
     get_classes
