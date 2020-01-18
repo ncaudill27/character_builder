@@ -401,7 +401,16 @@
   }
 
   .stats-container {
-    
+    margin: 15px 40px 15px 40px;
+  }
+
+  .stats-container label {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .stats-column {
+    float: left;
+    width: 40%;
   }
 /* End Characters Edit Styling */
 
