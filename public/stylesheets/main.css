@@ -140,7 +140,9 @@
   .navbar .login-container button:hover {
     background: #800000;
   }
+/* End Navbar Style */
 
+/* General Style */
   .wrapper {
     background: #fff;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -176,7 +178,7 @@
     margin-bottom: 18px;
   }
 
-  /* User Profile Styles */
+/* User Profile Styles */
 
   /* Style Table Labels */
   .profile-headers {
@@ -376,7 +378,11 @@
   }
 /* End Login Styling */
 
-/*  */
+/* Begin Characters Edit Styling */
+  .edit-container {
+    margin: 200px 0px 10px 0px;
+  }
+/* End Characters Edit Styling */
 
   .main {
     overflow: hidden;

@@ -1,29 +1,36 @@
-<h1>Edit <%= @character.name %></h1><br>
+<br><br><br>
+<h1>Edit <%= @character.name %></h1>
 
 
-
-<form action="/characters/<%=@character.id%>" method="post">
-<input type="hidden" name="_method" value="patch">
-    <label>Name:</label>
-    <input type="text" name="character[name]" value="<%= @character.name%>"><br>
-    <label>Race:</label>
-    <select name="race[name]">
-        <% @races.each do |race| %>
+<div class="edit-container">
+    <form action="/characters/<%=@character.id%>" method="post">
+    <input type="hidden" name="_method" value="patch">
+        <h3>Name:</h3>
+        <input type="text" name="character[name]" value="<%= @character.name%>"><br>
+    <div class="attribute-container">
+        <label id="race">Race:</label><br>
+        <select name="race[name]">
+            <% @races.each do |race| %>
             <option value="<%=race.name%>"><%=race.name%></option>
-        <% end %>
-    </select>
-    <label>Class:</label>
-    <select name="klass[name]">
-        <% @klasses.each do |klass| %>
+            <% end %>
+            </select>
+        
+        <label id="klass">Class:</label><br>
+            <select name="klass[name]">
+            <% @klasses.each do |klass| %>
             <option value="<%=klass.name%>"><%=klass.name%></option>
-        <% end %>
-    </select>
-    
-    
-    <% @character.stats.each do |key, val| %>
+            <% end %>
+            </select>
+    </div>
+
+    <div class="skills-container">
+
+        <% @character.stats.each do |key, val| %>
         <label><%= key %></label>
         <input type="text" name="character[<%=val%>]" value="<%=@character.send(val)%>"><br>
-    <% end %>
+        <% end %>
+    </div>
 
-    <input type="submit" value="Continue">
-</form>
+        <input type="submit" value="Continue">
+    </form>
+</div>
