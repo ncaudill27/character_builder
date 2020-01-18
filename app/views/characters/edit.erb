@@ -5,17 +5,17 @@
 <div class="edit-container">
     <form action="/characters/<%=@character.id%>" method="post">
     <input type="hidden" name="_method" value="patch">
-        <h3>Name:</h3>
+        <h3>Name</h3>
         <input type="text" name="character[name]" value="<%= @character.name%>"><br>
     <div class="attribute-container">
-        <label id="race">Race:</label><br>
+        <h3 id="race">Race</h3><br>
         <select name="race[name]">
             <% @races.each do |race| %>
             <option value="<%=race.name%>"><%=race.name%></option>
             <% end %>
             </select>
         
-        <label id="klass">Class:</label><br>
+        <h3 id="klass">Class</h3><br>
             <select name="klass[name]">
             <% @klasses.each do |klass| %>
             <option value="<%=klass.name%>"><%=klass.name%></option>
@@ -23,7 +23,8 @@
             </select>
     </div>
 
-    <div class="skills-container">
+    <div class="stats-container">
+        <h3>Stats</h3>
 
         <% @character.stats.each do |key, val| %>
         <label><%= key %></label>

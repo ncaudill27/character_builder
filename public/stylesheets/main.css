@@ -144,7 +144,7 @@
 
 /* General Style */
   .wrapper {
-    background: #fff;
+    background: #DDDDDD;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -380,7 +380,11 @@
 
 /* Begin Characters Edit Styling */
   .edit-container {
-    margin: 200px 0px 10px 0px;
+    margin: 40px 0px 10px 0px;
+  }
+
+  .edit-container h3 {
+    text-decoration: underline;
   }
 /* End Characters Edit Styling */
 
