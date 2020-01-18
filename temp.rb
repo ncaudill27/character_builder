@@ -77,7 +77,7 @@ class Scraper
     end
   end
 
-  def class_details(url)
+  def scrape_details(url)
     doc = Nokogiri::HTML(open("http://dnd5eapi.co" + url))
     # export = []
     

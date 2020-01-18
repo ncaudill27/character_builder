@@ -47,15 +47,23 @@ class Scrape
       object.skills << skill
     end
 
+    proficiencies.each do |proficiency|
+      prof = Proficiency.create(name: proficiency)
+    end
+
     
-    
+
     object.hit_die = doc.text.match(/hit_die..\d+/).to_s.match(/\d+/).to_s.to_i
   end
 
-
   def parse_skills(doc)
-    skills = doc.select{|j| j.match(/skill/)}
+    skills = doc.select{|j| j.match(/skill/)} # Still need to remove "skill-" from each word
     names = skills.each{|skill| skill.gsub!(/skill-/, '')} #=> Array of downcase, hyphen-seperated names
     names.collect{|name| name.split("-").collect{|word| word.capitalize}.join(" ")} #=> Array of capitalized names.
+  end
+
+  def parse_proficiencies(doc)
+    names = doc.select{|j| !j.match(/skill/)}
+    names.collect{|name| name.split("-").collect{|word| word.capitalize}.join(" ")}
   end
 end
