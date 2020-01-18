@@ -1,7 +1,10 @@
 class Scrape
 
   def klasses
-
+    get_classes
+    Klass.all.each do |klass|
+      add_details(klass)
+    end
   end
 
   def races
@@ -36,24 +39,24 @@ class Scrape
     end
   end
 
-  def class_details(object)
+  def add_details(object)
     doc = Nokogiri::HTML(open("http://dnd5eapi.co" + object.url))
     # Array of all skills and proficiencies, unparsed
     all = doc.text.scan(/\/api\/proficiencies\/[a-z]*-?[a-z]*-?[a-z]*/i).collect{|i| i.split("proficiencies/")[1]}
 
-    scrape_skills(all)
-    scrape_proficiencies(all)
+    skills = parse_skills(all)
+    proficiencies = parse_proficiencies(all)
+
+    skills.each do |skill|
+      skill = Skill.create(name: skill)
+      object.skills << skill
+    end
+
+    
+    
     object.hit_die = doc.text.match(/hit_die..\d+/).to_s.match(/\d+/).to_s.to_i
   end
 
-  def scrape_skills(doc)    
-    # Seperate skills
-    skills = parse_skills(doc)
-    skills.each do |skill|
-      Skill.create(name: skill)
-    end
-
-  end
 
   def parse_skills(doc)
     skills = doc.select{|j| j.match(/skill/)}
