@@ -7,6 +7,8 @@ class CharactersController < ApplicationController
 
     get "/characters/new" do
         @character = Character.new
+        @races = Race.all
+        @klasses = Klass.all
 
         erb :"/characters/new"
     end
@@ -14,15 +16,17 @@ class CharactersController < ApplicationController
     get "/characters/:id" do
         @character = Character.find_by(id: params[:id])
 
-       erb :"/characters/show" 
+        erb :"/characters/show" 
     end
 
     post "/characters" do
-       @character = Character.new(params[:character])
-       @character.user = current_user
-       @character.save
-
-       redirect "/characters/#{@character.id}"
+        @character = Character.new(params[:character])
+        @character.race = Race.find_by(params[:race])
+        @character.klass = Klass.find_by(params[:klass])
+        @character.user = current_user
+        @character.save
+        
+        redirect "/characters/#{@character.id}"
     end
 
     get "/characters/:id/edit" do

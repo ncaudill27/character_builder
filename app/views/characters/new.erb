@@ -4,11 +4,19 @@
 
 <form action="/characters" method="post">
     <label>Name:</label>
-    <input type="text" name="character[name]"><br>
+        <input type="text" name="character[name]"><br>
     <label>Race:</label>
-    <input type="text" name="character[race]"><br>
+        <select name="race[name]">
+        <% @races.each do |race| %>
+            <option value="<%=race.name%>"><%=race.name%></option>
+        <% end %>
+        </select>
     <label>Class:</label>
-    <input type="text" name="character[klass]"><br>
+        <select name="klass[name]">
+        <% @klasses.each do |klass| %>
+            <option value="<%=klass.name%>"><%=klass.name%></option>
+        <% end %>
+        </select>
     
 <h2>Character's Stats</h2>
     
@@ -19,3 +27,4 @@
 
     <input type="submit" value="Continue">
 </form>
+n
