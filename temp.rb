@@ -32,18 +32,24 @@ end
 class Race
   @@all = []
 
-  attr_accessor :url, :name
+  attr_accessor :name
   
   def initialize
     @@all << self
-    @skills = []
-    @proficiencies = []
   end
   
   def self.all
     @@all
   end
   
+end
+
+class Skill
+  attr_accessor :name
+end
+
+class Profinciency
+  attr_accessor :name
 end
 
 class Scraper
@@ -65,28 +71,28 @@ class Scraper
     names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
     urls = doc.text.scan(/\/api\/races\/[a-z]+/i)
     
-    names.each.with_index do |name, index|
+    names.each do |name|
       c = Race.new
       c.name = name
-      c.url = urls[index]
     end
   end
 
-  def scrape_details(url)
+  def class_details(url)
     doc = Nokogiri::HTML(open("http://dnd5eapi.co" + url))
-    export = []
+    # export = []
     
-    hit_die = doc.text.match(/hit_die..\d+/).to_s.match(/\d+/).to_s.to_i
-    export << hit_die
+    # hit_die = doc.text.match(/hit_die..\d+/).to_s.match(/\d+/).to_s.to_i
+    # export << hit_die
 
     all = doc.text.scan(/\/api\/proficiencies\/[a-z]*-?[a-z]*-?[a-z]*/i).collect{|i| i.split("proficiencies/")[1]}
-    skills = all.select{|i| i.match(/skill/)}
-    proficiencies = all.select{|i| !i.match(/skill/)}
-    export << skills
-    export << proficiencies
+    # skills = all.select{|i| i.match(/skill/)}
+    # proficiencies = all.select{|i| !i.match(/skill/)}
+    # export << skills
+    # export << proficiencies
     
-    export
+    # export
   end
+
 end
 
 s = Scraper.new
