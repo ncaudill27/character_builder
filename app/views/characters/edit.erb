@@ -27,9 +27,11 @@
     </div>
 
     <div class="stats-container">
+        <div class="health-container">
         <h3>Stats</h3>
-        <label>Health Points</label>
+        <label>Health Points</label><br>
         <input type="text" name="character[hp]" value="<%=@character.hp%>"><br>
+        </div>
         <% @character.stats.each_slice(2) do |key, val| %>
         <div class="stats-row">
             <div class="stats-column">
@@ -43,7 +45,7 @@
         </div>
         <% end %>
     </div>
-
+    <br><br><br><br><br><br>
         <input type="submit" value="Continue">
     </form>
 </div>
