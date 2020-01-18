@@ -182,8 +182,15 @@
 
   /* Style Table Labels */
   .profile-headers {
-    margin: 0% 8% 5% 23%;
+    margin: 0% 8% 5% 15%;
 
+  }
+  
+  .profile-headers h3 {
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    text-decoration: underline;
   }
 
   .header-title {
@@ -191,12 +198,6 @@
     width: 10%;
     margin-right: 7%;
     text-decoration: underline;
-  }
-
-  .header-title h3 {
-    font-size: 22px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
   }
 
   .header-title:after {
@@ -207,14 +208,14 @@
 
 /* Allocate table location */
   .profile-row {
-    margin: 0% 8% 1% 23%;
+    margin: 0% 8% 1% 15%;
   }
   /* Style Table Columns */
 
   .column {
     float: left;
-    width: 10%;
-    margin-right: 7%;
+    width: 15%;
+    margin-right: 4%;
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
   }
@@ -260,7 +261,7 @@
 /* Style "Add Character" Button */
   .add-character button {
     float: left;
-    margin-left: 22.5%;
+    margin-left: 16.3%;
     margin-bottom: 3%;
     width: 87px;
     background: #400000;
@@ -281,9 +282,7 @@
 
 /* Style "Edit Profile" Button */
   .edit-user {
-    float: right;
-    margin-right: 8px;
-    margin-top: 3px;
+    margin-bottom: 8px;
   }
 
   .edit-user button {
@@ -534,11 +533,13 @@
     padding: 0px;
     margin-top: 40px;
     text-align: center;
+    font-size: large;
   }
 
   .stats-show label {
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
+    font-size: larger;
   }
 
   .stats-show h3 {
