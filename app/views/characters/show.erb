@@ -33,9 +33,23 @@
     </div>
     <% end %>
 </div>
+
 <div class="skills-show">
-    <% @character.skills.each do |skill| %>
-        <h3><%=skill.name%></h3>
+    <h2>Skills</h2>
+    <% @character.skills.each_slice(4) do |skill| %>
+
+    <div class="skills-row">
+        <div class="skill-column"><h3><%=skill[0].name%></h3></div>
+        <% if skill[1] %>
+        <div class="skill-column"><h3><%=skill[1].name%></h3></div>
+        <% end %>
+        <% if skill[2] %>
+        <div class="skill-column"><h3><%=skill[2].name%></h3></div>
+        <% end %>
+        <% if skill[3] %>
+        <div class="skill-column"><h3><%=skill[3].name%></h3></div>
+        <% end %>
+    </div>
     <% end %>
 </div>
     <br>

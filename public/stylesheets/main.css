@@ -540,6 +540,24 @@
   .stats-show h3 {
     font-family: 'Montserrat', sans-serif;
   }
+
+  .skills-show {
+    margin-top: 175px;
+  }
+
+  .skills-show h3 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .skills-row {
+    margin-left: 62px;
+  }
+
+  .skill-column {
+    float: left;
+    width: 26%;
+    margin-bottom: 10px;
+  }
 /* End Character Show Styling */
 
   .main {
