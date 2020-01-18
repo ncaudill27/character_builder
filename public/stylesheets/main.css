@@ -485,6 +485,42 @@
   
 /* End Characters Edit Styling */
 
+/* Begin Character Show Styling */
+
+  .character-header {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 40px;
+  }
+
+  .character-header h1 {
+    font-size: 36px;
+    line-height: 54px;
+    margin: 0px;
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  .race-klass {
+    
+  }
+  
+  .race-box {
+    box-sizing: border-box;
+    width: 35%;
+    padding: 10%;
+    float: left;
+  }
+
+  .klass-box {
+    box-sizing: border-box;
+    width: 35%;
+    padding: 10%;
+    float: right;
+  }
+
+  
+/* End Character Show Styling */
+
   .main {
     overflow: hidden;
   }
