@@ -6,17 +6,17 @@
     <label>Name:</label>
         <input type="text" name="character[name]"><br>
     <label>Race:</label>
-        <select name="race[name]">
+    <select name="race[name]">
         <% @races.each do |race| %>
             <option value="<%=race.name%>"><%=race.name%></option>
         <% end %>
-        </select>
+    </select>
     <label>Class:</label>
-        <select name="klass[name]">
+    <select name="klass[name]">
         <% @klasses.each do |klass| %>
             <option value="<%=klass.name%>"><%=klass.name%></option>
         <% end %>
-        </select>
+    </select>
     
 <h2>Character's Stats</h2>
     
