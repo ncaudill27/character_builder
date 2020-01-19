@@ -59,3 +59,9 @@ Nelson Caudill
 This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
 ## Acknowledgments
+
+Navbar "Home" button: Coat of Arms-Delacroix, GoldenDaniel
+[https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990](https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990)
+
+Cover Art: Battle, wlop
+[https://www.deviantart.com/wlop/art/Battle-537837257](https://www.deviantart.com/wlop/art/Battle-537837257)
