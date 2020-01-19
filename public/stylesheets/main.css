@@ -458,6 +458,46 @@
     font-weight: bolder;
     font-size: larger;
   }
+
+  .new-character select {
+    margin-top: 8px;
+    padding: 2px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 1px 1px 1px black;
+    border-color: palegoldenrod;
+    background: #400000;
+    color: #FFFFFF
+  }
+
+  .new-stats input[type=text] {
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #400000;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    box-shadow: 1px 1px 2px black;
+    border-color: palegoldenrod;
+  }
+
+  .new-character input[type=submit] {
+    padding: 4px;
+    margin-top: 5px;
+    background-color: #400000;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    box-shadow: 1px 1px 2px lightslategray;
+    border-color: palegoldenrod;
+  }
+
+  .new-character input[type=submit]:hover {
+    cursor: pointer;
+    border-color: darkgray;
+    background: black;
+  }
 /* End Characters New Styling */
 
 /* Begin Characters Edit Styling */
