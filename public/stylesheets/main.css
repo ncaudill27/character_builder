@@ -445,11 +445,18 @@
   .new-character {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .new-character h2 {
     margin-top: 20px;
-    
+    text-decoration: underline;
+    font-family: 'Abril Fatface', cursive;
+  }
+
+  .new-character label {
+    font-weight: bolder;
+    font-size: larger;
   }
 /* End Characters New Styling */
 

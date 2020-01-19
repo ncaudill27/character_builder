@@ -23,7 +23,7 @@
     <h2>Character's Stats</h2>
         
         <% @character.stats.each do |key, val| %>
-            <label><%= key %></label>
+            <label><%= key %></label><br>
             <input type="text" name="character[<%= val %>]"><br>
         <% end %>
 
