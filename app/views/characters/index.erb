@@ -1,16 +1,16 @@
 <br><br><br>
 <h1>Creations</h1>
 
-<div class="index-container">
+<div class="creations-container">
     <ul>
     <% @characters.each_slice(2) do |pair| %>
-        <div class="index-row">
+        <div class="creations-row">
             <h3>
-                <div class="index-column">
+                <div class="creations-column">
                     <a href="/characters/<%=pair[0].id%>"><%=pair[0].name%></a>,
                     Made By:<a href="/<%=pair[0].owner%>"> <%=pair[0].owner%></a>
                 </div>
-                <div class="index-column">
+                <div class="creations-column">
                     <% if pair[1] %>
                     <a href="/characters/<%=pair[1].id%>"><%=pair[1].name%></a>,
                     Made By:<a href="/<%=pair[1].owner%>"> <%=pair[1].owner%></a>

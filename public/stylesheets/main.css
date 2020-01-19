@@ -413,7 +413,31 @@
   }
 /* End User Index Styling */
 
+/* Begin Creations Index Styling */
 
+.creations-row {
+  margin-left: 137px;
+  text-align: left;
+}
+
+.creations-column {
+  float: left;
+  width: 45%;
+}
+
+.creations-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.creations-container {
+  margin: 40px 50px 20px 150px;
+  padding-left: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* End Creations Index Styling */
 
 /* Login Styling */
 
