@@ -1,3 +1,11 @@
+s = Scraper.new
+s.klasses
+s.races
+
+Klass.all.do |klass|
+  s.add_details(klass)
+end
+
 def random_name
   names = ["Another Dummy", "Chappie", "The Dude", "Babushka", "Dummy", "El Diablo"]
   names[rand(names.count)]
