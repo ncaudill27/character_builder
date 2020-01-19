@@ -1,8 +1,9 @@
 class Character < ActiveRecord::Base
-    validates :name, :race, :klass, :user_id, presence: true
+    validates :name, :user_id, :race_id, :klass_id, presence: true
     belongs_to :user
-    has_one :race
-    has_one :klass
+    belongs_to :klass
+    belongs_to :race
+
     has_many :skills, through: :klass
     has_many :proficiencies, through: :klass
     def owner
