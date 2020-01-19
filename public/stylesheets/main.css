@@ -317,6 +317,7 @@
   }
 
   .user-edit input[type=text] {
+    margin-top: 4px;
     padding: 2px;
     font-family: 'Montserrat', sans-serif;
   }
