@@ -1,12 +1,12 @@
-# Character Creator
+# Creation Station
 
-Simple overview of use/purpose.
+Store your D&D characters, add your backstory or see other people's creations.
 
-## Description
+## What is this?
 
-An in-depth paragraph about your project and overview of use.
-
-## Getting Started
+Creation Station was made as a learning experience. Made to exemplify model relations and give a base for
+expansion. My hope is to add more and more RPG based features (e.g. Inventory, Dice Rolls). In the meantime feel
+free to use it how you wish!
 
 ### Dependencies
 
@@ -15,8 +15,11 @@ An in-depth paragraph about your project and overview of use.
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Repo can be found [here](https://github.com/ncaudill27/creation_station)
+* If you'd like to start the program with dummy data:
+```
+rake db:seed
+```
 
 ### Executing program
 
@@ -37,10 +40,8 @@ shotgun -p 0000
 
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+Anything added to Issues will be looked over and replied to as soon as possible.
+
 
 ## Authors
 
@@ -60,6 +61,9 @@ Twitter: [@pixel8dChappie](https://twitter.com/pixel8dChappie)
 This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
 ## Acknowledgments
+
+Character Models: D&D 5e API
+[http://dnd5eapi.co](http://dnd5eapi.co)
 
 Navbar "Home" button: Coat of Arms-Delacroix, GoldenDaniel
 [https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990](https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990)
