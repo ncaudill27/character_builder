@@ -1,29 +1,32 @@
-<h1>Create New Character</h1><br>
+<br><br>
+<h1>Create New Character</h1>
 
+<div class="new-character">
 <h2>Character's Details</h2>
 
-<form action="/characters" method="post">
-    <label>Name:</label>
-        <input type="text" name="character[name]"><br>
-    <label>Race:</label>
-    <select name="race[name]">
-        <% @races.each do |race| %>
-            <option value="<%=race.name%>"><%=race.name%></option>
+    <form action="/characters" method="post">
+        <label>Name:</label>
+            <input type="text" name="character[name]"><br>
+        <label>Race:</label>
+        <select name="race[name]">
+            <% @races.each do |race| %>
+                <option value="<%=race.name%>"><%=race.name%></option>
+            <% end %>
+        </select>
+        <label>Class:</label>
+        <select name="klass[name]">
+            <% @klasses.each do |klass| %>
+                <option value="<%=klass.name%>"><%=klass.name%></option>
+            <% end %>
+        </select>
+        
+    <h2>Character's Stats</h2>
+        
+        <% @character.stats.each do |key, val| %>
+            <label><%= key %></label>
+            <input type="text" name="character[<%= val %>]"><br>
         <% end %>
-    </select>
-    <label>Class:</label>
-    <select name="klass[name]">
-        <% @klasses.each do |klass| %>
-            <option value="<%=klass.name%>"><%=klass.name%></option>
-        <% end %>
-    </select>
-    
-<h2>Character's Stats</h2>
-    
-    <% @character.stats.each do |key, val| %>
-        <label><%= key %></label>
-        <input type="text" name="character[<%= val %>]"><br>
-    <% end %>
 
-    <input type="submit" value="Continue">
-</form>
+        <input type="submit" value="Continue">
+    </form>
+</div>

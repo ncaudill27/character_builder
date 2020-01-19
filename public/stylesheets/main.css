@@ -440,6 +440,19 @@
   }
 /* End Login Styling */
 
+/* Begin Characters New Styling */
+
+  .new-character {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .new-character h2 {
+    margin-top: 20px;
+    
+  }
+/* End Characters New Styling */
+
 /* Begin Characters Edit Styling */
 
   .name-edit {
