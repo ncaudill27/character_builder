@@ -464,6 +464,43 @@
   }
 /* End Login Styling */
 
+/* Begin Signup Styling */
+  .signup h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .signup label {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: larger;
+  }
+
+  .signup input {
+    padding: 2px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    box-shadow: 1px 1px 1px black;
+    border-color: palegoldenrod;
+    background: #400000;
+    color: #FFFFFF
+  }
+
+  .signup input[type=submit] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .signup input[type=submit]:hover {
+    cursor: pointer;
+    border-color: darkgray;
+    background: black;
+  }
+/* End Signup Styling */
+
+
 /* Begin Characters New Styling */
 
   .new-character {
