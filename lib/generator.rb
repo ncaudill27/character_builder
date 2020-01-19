@@ -29,8 +29,7 @@ class Generator
   def generate_characters
     25.times do
       c = Character.new(
-        user_id: User.all[rand(User.all.count)],
-        name: random_name,
+        name: random_char_name,
         hp: rand(100),
         str: rand(20),
         con: rand(20),
@@ -39,6 +38,7 @@ class Generator
         wis: rand(20),
         cha: rand(20)
       )
+      c.user = User.all[rand(User.all.count)],
       c.race = Race.all[rand(Race.all.count)]
       c.klass = Klass.all[rand(Klass.all.count)]
       c.save
