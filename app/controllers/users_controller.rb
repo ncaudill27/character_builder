@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     end
 
     get "/:username/edit/password" do
-        @user = User.find_by(username params[:username])
+        @user = User.find_by(username: params[:username])
 
         erb  :"users/password"
     end
@@ -55,6 +55,12 @@ class UsersController < ApplicationController
         user.save
         
         redirect "/#{user.username}"
+    end
+
+    put "/:username/password" do
+        user = User.find_by(username: params[:username])        
+        binding.pry
+
     end
 
     delete "/:username" do
