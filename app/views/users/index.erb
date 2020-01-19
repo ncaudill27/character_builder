@@ -10,7 +10,9 @@
             <a href="<%=pair[0].username%>"><%=pair[0].username%></a>, Creations: <%=pair[0].characters.count%>
         </div>
         <div class="user-column">
+            <% if pair[1] %>
             <a href="<%=pair[1].username%>"><%=pair[1].username%></a>, Creations: <%=pair[1].characters.count%>
+            <% end %>
         </div>
         </h3>
     <div>
