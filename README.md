@@ -10,8 +10,8 @@ An in-depth paragraph about your project and overview of use.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Ruby 2.6.1 or higher
+* Your favorite browser!
 
 ### Installing
 
@@ -47,7 +47,8 @@ command to run if program contains helper info
 Contributors names and contact info
 
 Nelson Caudill  
-[@pixel8dChappie](https://twitter.com/pixel8dChappie)
+GitHub: [ncaudill27](https://github.com/ncaudill27)
+Twitter: [@pixel8dChappie](https://twitter.com/pixel8dChappie)
 
 ## Version History
 
