@@ -19,7 +19,7 @@ class Generator
     10.times do |i|
       u = User.new(
         username: usernames[i],
-        email: "example#{i}@example.com"
+        email: "example#{i}@example.com",
         password: "password"
       )
       u.save
@@ -38,9 +38,10 @@ class Generator
         wis: rand(20),
         cha: rand(20)
       )
-      c.user = User.all[rand(User.all.count)],
+      c.user = User.all[rand(User.all.count)]
       c.race = Race.all[rand(Race.all.count)]
       c.klass = Klass.all[rand(Klass.all.count)]
       c.save
     end
+  end
 end
