@@ -416,13 +416,13 @@
 /* Begin Creations Index Styling */
 
 .creations-row {
-  margin-left: 137px;
+  margin-left: 10px;
   text-align: left;
 }
 
 .creations-column {
   float: left;
-  width: 45%;
+  width: 50%;
 }
 
 .creations-row:after {
@@ -432,8 +432,8 @@
 }
 
 .creations-container {
-  margin: 40px 50px 20px 150px;
-  padding-left: 30px;
+  margin: 40px 0px 20px 30px;
+  padding-left: 20px;
   font-family: 'Montserrat', sans-serif;
 }
 
