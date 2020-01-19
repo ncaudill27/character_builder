@@ -71,7 +71,7 @@ class UsersController < ApplicationController
 
     delete "/:username" do
         user = User.find_by(username: params[:username])
-        if logged_in? && current_user.username == @user.username
+        if logged_in? && current_user.username == user.username
             user.destroy
         end
 
