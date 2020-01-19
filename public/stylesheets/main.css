@@ -498,6 +498,10 @@
     border-color: darkgray;
     background: black;
   }
+
+  .stats-rows {
+    margin: 4px 0px 10px 87px;
+  }
 /* End Characters New Styling */
 
 /* Begin Characters Edit Styling */
