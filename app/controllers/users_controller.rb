@@ -59,7 +59,14 @@ class UsersController < ApplicationController
 
     put "/:username/password" do
         user = User.find_by(username: params[:username])        
-        binding.pry
+        if current_user.authenticate(params[:password][:current]) && params[:password][:new] == params[:password][:confirm]
+
+            current_user.update(password: params[:password][:new])
+            redirect "/#{current_user.username}"
+        else
+
+            
+        end
 
     end
 
