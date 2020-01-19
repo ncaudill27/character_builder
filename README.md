@@ -20,11 +20,20 @@ An in-depth paragraph about your project and overview of use.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* Fork and clone repo
+* Run Bundle
 ```
-code blocks for commands
+bundle install
 ```
+* Run shotgun, default 127.0.0.1:9393
+```
+shotgun
+```
+* Alternatively, choose another port
+```
+shotgun -p 0000
+```
+
 
 ## Help
 
@@ -47,6 +56,6 @@ Nelson Caudill
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
 ## Acknowledgments
