@@ -33,8 +33,11 @@ class CharactersController < ApplicationController
         @character = Character.find_by(id: params[:id])
         @races = Race.all
         @klasses = Klass.all
-
-        erb :"/characters/edit"
+        if logged_in? && current_user.id == @character.user_id
+            erb :"/characters/edit"
+        else
+            redirect "/login"
+        end
     end
 
     patch "/characters/:id" do
@@ -49,7 +52,9 @@ class CharactersController < ApplicationController
     delete "/characters/:id" do
         character = Character.find_by(id: params[:id])
         user = character.user
-        character.destroy
+        if logged_in? && current_user.id == character.user_id
+            character.destroy
+        end
 
         redirect "/#{user.username}"
     end

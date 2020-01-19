@@ -53,8 +53,9 @@ class UsersController < ApplicationController
 
     delete "/:username" do
         user = User.find_by(username: params[:username])
-        #TODO Add security check
-        user.destroy
+        if logged_in? && current_user.username == @user.username
+            user.destroy
+        end
 
         redirect "/users"
     end
