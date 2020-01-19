@@ -8,6 +8,6 @@ ActiveRecord::Base.establish_connection(
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 
-require './lib/scraper'
+require_all 'lib'
 require './app/controllers/application_controller'
 require_all 'app'
