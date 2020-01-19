@@ -64,8 +64,7 @@ class UsersController < ApplicationController
             current_user.update(password: params[:password][:new])
             redirect "/#{current_user.username}"
         else
-
-            
+            redirect "/logout"            
         end
 
     end
