@@ -1,5 +1,5 @@
 class Character < ActiveRecord::Base
-    validates :name, :user_id, presence: true
+    validates :name, :race, :klass, :user_id, presence: true
     belongs_to :user
     has_one :race
     has_one :klass
