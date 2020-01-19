@@ -42,6 +42,12 @@ class UsersController < ApplicationController
         end
     end
 
+    get "/:username/edit/password" do
+        @user = User.find_by(username params[:username])
+
+        erb  :"users/password"
+    end
+
     patch "/:username" do
         user = User.find_by(username: params[:username])
         user.username = params[:user][:username]
