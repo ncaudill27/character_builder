@@ -367,7 +367,7 @@
   
 /* End User Edit Styling */
 
-/* Begin Index Styling */
+/* Begin User Index Styling */
   .index-container {
     margin-top: 40px;
     margin-bottom: 3%;
@@ -391,10 +391,8 @@
   }
 
   .user-container {
-    margin-left: 160px;
-    margin-top: 40px;
-    margin-bottom: 3%;
-    padding-left: 40px;
+    margin: 40px 50px 20px 150px;
+    padding-left: 30px;
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -405,7 +403,7 @@
 
   .user-column {
     float: left;
-    width: 40%;
+    width: 47%;
   }
 
   .user-row:after {
@@ -413,7 +411,9 @@
     display: table;
     clear: both;
   }
-/* End Index Styling */
+/* End User Index Styling */
+
+
 
 /* Login Styling */
 
