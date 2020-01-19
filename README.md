@@ -49,6 +49,7 @@ Contributors names and contact info
 
 Nelson Caudill  
 GitHub: [ncaudill27](https://github.com/ncaudill27)
+
 Twitter: [@pixel8dChappie](https://twitter.com/pixel8dChappie)
 
 ## Version History
@@ -62,11 +63,9 @@ This project is licensed under the [MIT] License - see the LICENSE.md file for d
 
 ## Acknowledgments
 
-Character Models: D&D 5e API
-[http://dnd5eapi.co](http://dnd5eapi.co)
 
-Navbar "Home" button: Coat of Arms-Delacroix, GoldenDaniel
-[https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990](https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990)
+Character Models:[http://dnd5eapi.co](http://dnd5eapi.co)
 
-Cover Art: Battle, wlop
-[https://www.deviantart.com/wlop/art/Battle-537837257](https://www.deviantart.com/wlop/art/Battle-537837257)
+Navbar "Home" button: [https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990](https://www.deviantart.com/goldendaniel/art/Coat-of-Arms-Delacroix-449324990)
+
+* Cover Art: [https://www.deviantart.com/wlop/art/Battle-537837257](https://www.deviantart.com/wlop/art/Battle-537837257)
