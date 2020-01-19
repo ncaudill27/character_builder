@@ -52,11 +52,15 @@
     </div>
     <% end %>
 </div>
+<br><br>
+<br><br>
+
+    <div class="edit-char">
+        <button><a href="/characters/<%=@character.id%>/edit">Edit Character</a></button>
+        <form action="/characters/<%=@character.id%>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="DELETE">
+        </form>
+    </div>
     <br>
-    <h5><a href="/characters/<%=@character.id%>/edit">Edit Character</a></h5>
-    <br>
-    <form action="/characters/<%=@character.id%>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Delete <%=@character.name%>">
-    </form>
 </div>

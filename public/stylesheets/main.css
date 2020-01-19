@@ -498,6 +498,10 @@
     border-bottom: none;
     padding-bottom: 0px;
   }
+
+  .character-header h3 {
+    font-family: 'Montserrat', sans-serif;
+  }
   
   .race-klass h3 {
     font-family: 'Montserrat', sans-serif;
@@ -568,6 +572,43 @@
     content: "";
     display: table;
     clear: both;
+  }
+
+  .edit-char button {
+    width: 77px;
+    padding: 3px;
+    background: #400000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .edit-char button:hover {
+    background: black;
+  }
+
+  .edit-char a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .edit-char input {
+    width: 77px;
+    height: 24px;
+    margin-top: 4px;
+    padding: 3px;
+    background: #400000;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .edit-char input:hover {
+    background: black;
   }
 /* End Character Show Styling */
 
