@@ -42,9 +42,10 @@ class CharactersController < ApplicationController
 
     patch "/characters/:id" do
         character = Character.find_by(id: params[:id])
+        character.klass = Klass.find_by(params[:klass])
+        character.race =  Race.find_by(params[:race])
         character.update(params[:character])
-        character.klass.update(params[:klass])
-        character.race.update(params[:race])
+        character.save
         
         redirect "/characters/#{character.id}"
     end
