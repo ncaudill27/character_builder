@@ -48,7 +48,7 @@ class Scraper
 
     
 
-    object.hit_die = doc.text.match(/hit_die..\d+/).to_s.match(/\d+/).to_s.to_i
+    # object.hit_die = doc.text.match(/hit_die..\d+/).to_s.match(/\d+/).to_s.to_i
   end
 
   def parse_skills(doc)
