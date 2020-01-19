@@ -43,6 +43,7 @@ class Scraper
 
     proficiencies.each do |proficiency|
       prof = Proficiency.create(name: proficiency)
+      object.proficiencies << prof
     end
 
     
