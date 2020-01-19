@@ -20,7 +20,7 @@ class Scraper
 
   def races
     doc = Nokogiri::HTML(open("http://dnd5eapi.co/api/races/"))
-    names = doc.text.scan(/name...[a-z]+/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
+    names = doc.text.scan(/name...[a-z]*-?[a-z]*/i).collect{|klass| klass.match(/[A-Z].+/).to_s}
     # urls = doc.text.scan(/\/api\/races\/[a-z]+/i)
     
     names.each do |name|
