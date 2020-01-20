@@ -9,8 +9,11 @@ class CharactersController < ApplicationController
         @character = Character.new
         @races = Race.all
         @klasses = Klass.all
-
-        erb :"/characters/new"
+        if logged_in?
+            erb :"/characters/new"
+        else
+            redirect "/login"
+        end
     end
 
     get "/characters/:id" do
